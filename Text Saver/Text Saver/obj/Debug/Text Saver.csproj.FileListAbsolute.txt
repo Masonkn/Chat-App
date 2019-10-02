@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\Text Saver\Text Saver\bin\Debug\Text Saver.exe.config
+C:\Users\user\source\repos\Text Saver\Text Saver\bin\Debug\Text Saver.exe
+C:\Users\user\source\repos\Text Saver\Text Saver\bin\Debug\Text Saver.pdb
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\App.g.cs
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.cache
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.lref
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.g.resources
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text_Saver.Properties.Resources.resources
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.exe
+C:\Users\user\source\repos\Text Saver\Text Saver\obj\Debug\Text Saver.pdb
