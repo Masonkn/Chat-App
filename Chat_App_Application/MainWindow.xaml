@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_App_Application"
-        mc:Ignorable="d"
-        Title="Chat_App_Solution_1" Height="450" Width="400">
+        mc:Ignorable="d">
 
 
     <Grid>
