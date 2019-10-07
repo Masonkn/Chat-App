@@ -4,18 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_App_Application"
-        mc:Ignorable="d">
+        mc:Ignorable="d" Width="951.012">
 
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="37*"/>
-            <ColumnDefinition Width="19*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="56" Margin="32,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2"/>
-        <Button Content="Send" HorizontalAlignment="Left" Height="38" Margin="11.113,354,0,0" VerticalAlignment="Top" Width="72" Grid.Column="1"/>
-        <Canvas HorizontalAlignment="Left" Height="229" Margin="32,30,0,0" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="263" Margin="32,25,0,0" VerticalAlignment="Top" Width="324" Grid.ColumnSpan="2"/>
+        <ListBox HorizontalAlignment="Left" Height="438" VerticalAlignment="Top" Width="233" Margin="0,70,0,-0.5">
+            <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray" HorizontalContentAlignment="Center">
+                
+                Ticket #1
+            </ListBoxItem>
+            
+            
+            
+            <ListBoxItem Height="60">Ticket #2</ListBoxItem>
+            <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #3</ListBoxItem>
+            <ListBoxItem Height="60">Ticket #4</ListBoxItem>
+            <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #5</ListBoxItem>
+
+        </ListBox>
+        
+        <Ellipse HorizontalAlignment="Left" Height="50" Margin="15,77,0,0" VerticalAlignment="Top" Width="50">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="\\vmware-host\Shared Folders\Desktop\user-2.png"></ImageBrush>
+            </Ellipse.Fill>
+        </Ellipse>
 
     </Grid>
 </Window>
