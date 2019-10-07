@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,14 @@ namespace Text_Saver
             InitializeComponent();
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //If I'm being honest, idk how this works...
+            SaveFileDialog dlg = new SaveFileDialog();
+            if(dlg.ShowDialog() == true)
+            {
+                File.WriteAllText(dlg.FileName, txt.Text);
+            }
+        }
     }
 }
