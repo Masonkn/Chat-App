@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!--"Click:" and "x:name="txtbox" are names that are referred to in the C#-->
         <TextBox HorizontalAlignment="Left" Height="142" Margin="233,92,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="273"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="336,315,0,0" VerticalAlignment="Top" Width="75"/>
 
