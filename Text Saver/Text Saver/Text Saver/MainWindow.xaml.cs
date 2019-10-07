@@ -29,9 +29,12 @@ namespace Text_Saver
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //If I'm being honest, idk how this works...
+            //If I'm being honest, idk how this works....
             SaveFileDialog dlg = new SaveFileDialog();
-            if(dlg.ShowDialog() == true)
+            dlg.Filter = "Text file(*.txt)|*.txt|c# file (*.cs)|*.cs";//Allows different file types to be used
+            //dlg.InitialDirectory = @"c:\"; //Kept this in case we need to hard code
+            dlg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            if (dlg.ShowDialog() == true)
             {
                 File.WriteAllText(dlg.FileName, txt.Text);
             }
