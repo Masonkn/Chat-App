@@ -30,12 +30,13 @@ namespace Chat_App_Application
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] customer =
+            string[] texts =
             {
                     txtbox_msg.Text
             };
             File.WriteAllText(Directory.GetCurrentDirectory() + //Could be shorter, maybe
-                "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
+                "\\Saved Texts\\savedText.txt", texts[0]);//Write the contents of the file
+            char[] txtArray = texts.ToCharArray();
 
             msg_txtblock.Text = txtbox_msg.Text;
         }
