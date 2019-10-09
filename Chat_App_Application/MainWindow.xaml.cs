@@ -34,6 +34,7 @@ namespace Chat_App_Application
             {
                     txtbox_msg.Text
             };
+
             File.WriteAllText(Directory.GetCurrentDirectory() + //Could be shorter, maybe
                 "\\Saved Texts\\savedText.txt", texts[0]);//Write the contents of the file
             char[] txtArray = texts.ToCharArray();
