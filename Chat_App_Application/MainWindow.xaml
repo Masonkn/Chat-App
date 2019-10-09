@@ -8,18 +8,57 @@
 
 
     <Grid>
+
+        <!--/ This is the ListBox for all the tickets no matter their status >-->
         <ListBox HorizontalAlignment="Left" Height="438" VerticalAlignment="Top" Width="233" Margin="-3,73,0,-3.5" BorderBrush="Black" BorderThickness="1">
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #1</ListBoxItem>
-            <ListBoxItem Height="60">Ticket #2</ListBoxItem>
+            <ListBoxItem Height="60" BorderBrush="Black">Ticket #2</ListBoxItem>
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #3</ListBoxItem>
-            <ListBoxItem Height="60">Ticket #4</ListBoxItem>
+            <ListBoxItem Height="60" BorderBrush="Black">Ticket #4</ListBoxItem>
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #5</ListBoxItem>
         </ListBox>
 
+
+        <!--/ Button and TextBox for sending messages through the app >-->
+        <Button x:Name="btn_send" Content="Send" HorizontalAlignment="Left" Margin="853,487,-2,-3.5" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="24"/>
+        <TextBox x:Name="txtbox_msg" HorizontalAlignment="Left" Height="24" Margin="229,487,0,-3.5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="626" BorderBrush="Black"/>
+
+        <!--/ This Canvas will serve to display messages >-->
+        <!--/ The canvas is wraped in a border tag just for style purposes >-->
+        <Border x:Name="msg_canvas_border" BorderBrush="Black" Margin="680,0,-2,19.5" BorderThickness="1">
+            <Canvas x:Name="msg_canvas" HorizontalAlignment="Left" Height="477" VerticalAlignment="Top" Width="268" Margin="2,9,-4,-1"/>
+        </Border>
+
+        <!--/ This will show the opened ticket title and description>-->
+        <Label x:Name="ticket_title" Content="Ticket #1" HorizontalAlignment="Left" Margin="230,0,0,0" VerticalAlignment="Top" Width="451" BorderBrush="Black" BorderThickness="1"/>
+        <Label x:Name="ticket_description" Content="Ticket description" HorizontalAlignment="Left" Margin="230,27,0,0" VerticalAlignment="Top" Width="451" BorderBrush="Black" BorderThickness="1" Height="46"/>
+
+        <!--/ TEMPORARY PLACEMENT of to-do, in progress and done tickets >-->
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,75,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,135,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,195,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,255,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,315,0,0" VerticalAlignment="Top" Width="20" Fill="Red"/>
+
+        <!--/ The following items will be part of the top-left user menu -->
+
+        <!--/ User profile picture>-->
+        <Ellipse HorizontalAlignment="Left" Height="55" Margin="20,10,0,0" VerticalAlignment="Top" Width="55" Fill="AliceBlue"/>
+        <!--/ Create new ticket button >-->
+        <Button Content="+" HorizontalAlignment="Left" Margin="95,27,0,0" VerticalAlignment="Top" Width="25" Height="25"/>
+        <!--/ Placeholder >-->
+        <Button Content="+" HorizontalAlignment="Left" Margin="131,27,0,0" VerticalAlignment="Top" Width="25" Height="25"/>
+        <!--/ Log out button >-->
+        <Button Content="+" HorizontalAlignment="Left" Margin="170,27,0,0" VerticalAlignment="Top" Width="25" Height="26"/>
+
+
+
+=======
         <Button  x:Name="btn_send" Content="Send" HorizontalAlignment="Left" Margin="851,487,0,-3.5" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="24"/>
         <TextBox x:Name="txtbox_msg" HorizontalAlignment="Left" Height="24" Margin="229,487,0,-3.5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="626" BorderBrush="Black"/>
 
         <Border x:Name="msg_canvas_border" BorderBrush="Black" Margin="678,1,-0.2,105.6" BorderThickness="1">
+
 
                 <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
            
