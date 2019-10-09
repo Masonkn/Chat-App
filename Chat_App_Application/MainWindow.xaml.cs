@@ -34,7 +34,10 @@ namespace Chat_App_Application
             {
                     txtbox_msg.Text
             };
-            File.WriteAllText(Directory.GetCurrentDirectory() + "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
+            File.WriteAllText(Directory.GetCurrentDirectory() + //Could be shorter, maybe
+                "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
+
+            msg_txtblock.Text = txtbox_msg.Text;
         }
     }
 }
