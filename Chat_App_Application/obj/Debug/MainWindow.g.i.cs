@@ -91,6 +91,8 @@ namespace Chat_App_Application
         internal System.Windows.Controls.Button btn_send;
         internal System.Windows.Controls.TextBox txtbox_msg;
         internal System.Windows.Controls.Canvas msg_canvas;
+        internal System.Windows.Controls.Label ticket_title;
+        internal System.Windows.Controls.Label ticket_description;
     }
 }
 
