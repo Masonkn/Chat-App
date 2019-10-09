@@ -16,16 +16,12 @@
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #5</ListBoxItem>
         </ListBox>
 
-        <Button x:Name="btn_send" Content="Send" HorizontalAlignment="Left" Margin="851,487,0,-3.5" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="24"/>
+        <Button  x:Name="btn_send" Content="Send" HorizontalAlignment="Left" Margin="851,487,0,-3.5" VerticalAlignment="Top" Width="95" Click="Button_Click" Height="24"/>
         <TextBox x:Name="txtbox_msg" HorizontalAlignment="Left" Height="24" Margin="229,487,0,-3.5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="626" BorderBrush="Black"/>
 
         <Border x:Name="msg_canvas_border" BorderBrush="Black" Margin="678,1,0,19.5" BorderThickness="1">
             <Canvas x:Name="msg_canvas" HorizontalAlignment="Left" Height="485" VerticalAlignment="Top" Width="268" Margin="0,1,-2,-1"/>
         </Border>
-
-
-
-
 
     </Grid>
 </Window>

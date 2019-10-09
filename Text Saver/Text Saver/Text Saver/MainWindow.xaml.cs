@@ -31,7 +31,6 @@ namespace Text_Saver
         {
                 string[] customer =
                 {
-                    txt.Text,
                     txt.Text
                 };
                 File.WriteAllText(Directory.GetCurrentDirectory() + "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file

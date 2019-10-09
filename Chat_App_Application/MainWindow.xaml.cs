@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,11 @@ namespace Chat_App_Application
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string[] customer =
+            {
+                    txtbox_msg.Text
+            };
+            File.WriteAllText(Directory.GetCurrentDirectory() + "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
         }
     }
 }
