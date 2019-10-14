@@ -38,6 +38,8 @@ namespace Chat_App_Application
                 "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
 
             msg_txtblock.Text = txtbox_msg.Text;
+
+            txtbox_msg.Text= " ";
         }
     }
 }
