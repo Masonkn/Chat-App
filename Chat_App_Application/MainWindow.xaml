@@ -26,7 +26,7 @@
         <!--/ This Canvas will serve to display messages >-->
         <!--/ The canvas is wraped in a border tag just for style purposes >-->
         <Border x:Name="msg_canvas_border" BorderBrush="Black" Margin="680,0,-2,19.5" BorderThickness="1">
-            <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
+            <Canvas x:Name="msg_canvas" HorizontalAlignment="Left" Height="477" VerticalAlignment="Top" Width="268" Margin="2,9,-4,-1"/>
         </Border>
 
         <!--/ This will show the opened ticket title and description>-->
@@ -55,7 +55,7 @@
 
 
 
-               
+                <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
            
 
     </Grid>
