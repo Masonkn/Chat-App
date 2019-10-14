@@ -53,10 +53,15 @@
 
 
 
+        <Button  x:Name="btn_send1" Content="Send" HorizontalAlignment="Left" Margin="854,483,-2,-3" VerticalAlignment="Top" Width="91" Click="Button_Click" Height="24"/>
+        <TextBox x:Name="txtbox_msg1" HorizontalAlignment="Left" Height="24" Margin="229,483,0,-3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="626" BorderBrush="Black"/>
+
+        <Border x:Name="msg_canvas_border1" BorderBrush="Black" Margin="678,1,-0.2,105.6" BorderThickness="1">
 
 
-                <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
-           
+            <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
+
+        </Border>
 
     </Grid>
 </Window>
