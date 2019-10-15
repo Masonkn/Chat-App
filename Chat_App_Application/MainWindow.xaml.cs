@@ -40,6 +40,8 @@ namespace Chat_App_Application
             char[] txtArray = texts.ToCharArray();
 
             msg_txtblock.Text = txtbox_msg.Text;
+
+            txtbox_msg.Text= " ";
         }
     }
 }
