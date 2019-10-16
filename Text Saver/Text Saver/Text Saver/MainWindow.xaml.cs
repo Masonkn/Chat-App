@@ -22,6 +22,9 @@ namespace Text_Saver
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> allMessages = new List<string>(); //The list of all mesages
+        String msgDisp; //The string that will represent all the messages sent.
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,11 +32,15 @@ namespace Text_Saver
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-                string[] customer =
-                {
-                    txt.Text
-                };
-                File.WriteAllText(Directory.GetCurrentDirectory() + "\\Saved Texts\\savedText.txt", customer[0]);//Write the contents of the file
+            allMessages.Add(txt_box.Text);//This is more for saving than displaying
+            msgDisp += "\n" + txt_box.Text;//add onto the display String
+            
+            txt_block.Text = msgDisp;//Replace the display String
+
+            File.WriteAllText(Directory.GetCurrentDirectory() + 
+                "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count-1]);//Write the contents of the file
+
+            txt_box.Text = "";//So the user can't spam their one message
         }
     }
 }

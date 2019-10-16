@@ -8,7 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <!--"Click:" and "x:name="txt" are names that are referred to in the C#-->
-        <TextBox x:Name="txt" HorizontalAlignment="Left" Height="142" Margin="233,92,0,0" TextWrapping="Wrap" Text="Enter Text Here" VerticalAlignment="Top" Width="273"/>
-        <Button Click="Button_Click" Content="Save Text" HorizontalAlignment="Left" Margin="336,315,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox Name="txt_box" HorizontalAlignment="Left" Height="142" Margin="58,103,0,0" TextWrapping="Wrap" Text="Enter Text Here" VerticalAlignment="Top" Width="273"/>
+        <Button Click="Button_Click" Content="Save Text" HorizontalAlignment="Left" Margin="150,293,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock Name ="txt_block" HorizontalAlignment="Left" Margin="453,103,0,0" TextWrapping="Wrap" Text="Text shows up here" VerticalAlignment="Top" Height="142" Width="280"/>
     </Grid>
 </Window>
