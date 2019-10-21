@@ -54,6 +54,5 @@
         <Button Content="+" HorizontalAlignment="Left" Margin="170,27,0,0" VerticalAlignment="Top" Width="25" Height="26"/>
         <Button x:Name="btn_send" Content="Send" Margin="0,0,-3,0" Click="Button_Click" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100" Grid.Column="2"/>
 
-
     </Grid>
 </Window>
