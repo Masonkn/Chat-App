@@ -53,11 +53,7 @@
         <Button Content="+" HorizontalAlignment="Left" Margin="170,27,0,0" VerticalAlignment="Top" Width="25" Height="26" Grid.RowSpan="2"/>
         <Button x:Name="btn_send" Content="Send" Margin="852,487,-2,0" Click="Button_Click" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="95"/>
 
-
-
-
-
-                <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
+        <!--<TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>-->
            
 
     </Grid>
