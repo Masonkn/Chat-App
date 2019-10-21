@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_App_Application"
         Width="950" Height="539"
+        SizeToContent="WidthAndHeight"
         >
 
     <Grid>
@@ -57,8 +58,7 @@
 
 
 
-                <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Text="TextBlock" Height="482" Width="264"/>
-           
+               
 
     </Grid>
 </Window>
