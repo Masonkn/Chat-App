@@ -21,27 +21,25 @@ namespace Chat_App_Application
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> allMessages = new List<string>(); //The list of all mesages
+        String msgDisp; //The string that will represent all the messages sent.
+
         public MainWindow()
         {
             InitializeComponent();
-
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] texts =
-            {
-                    txtbox_msg.Text
-            };
+            allMessages.Add(txtbox_msg.Text);//This is more for saving than displaying
+            msgDisp += "\n" + txtbox_msg.Text;//add onto the display String
 
-            File.WriteAllText(Directory.GetCurrentDirectory() + //Could be shorter, maybe
-                "\\Saved Texts\\savedText.txt", texts[0]);//Write the contents of the file
-            char[] txtArray = texts.ToCharArray();
+            msg_txtblock.Text = msgDisp;//Replace the display String
 
-            msg_txtblock.Text = txtbox_msg.Text;
+            File.WriteAllText(Directory.GetCurrentDirectory() +
+                "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count - 1]);//Write the contents of the file
 
-            txtbox_msg.Text= " ";
+            txtbox_msg.Text = "";//So the user can't spam their one message
         }
     }
 }
