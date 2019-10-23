@@ -1,0 +1,17 @@
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\bin\Debug\Internet Communicator.exe.config
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\bin\Debug\Internet Communicator.exe
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\bin\Debug\Internet Communicator.pdb
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\bin\Debug\SimpleTCP.dll
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\App.g.cs
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator_MarkupCompile.lref
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.g.resources
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet_Communicator.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.exe
+C:\Users\user\Documents\GitHub\Chat-App\Chat_App_Application\Internet communicator\Internet Communicator\Internet Communicator\obj\Debug\Internet Communicator.pdb

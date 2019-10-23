@@ -6,6 +6,8 @@
 *.cache
 *.cache
 *.lref
+*.lock
+#.lock may work, it may not#
 *.cs
 *.cs
 Chat_App_Application/.vs/Chat_App_Application/v15/Server/sqlite3/
