@@ -11,3 +11,5 @@
 Chat_App_Application/.vs/Chat_App_Application/v15/Server/sqlite3/
 Chat_App_Application/obj/Debug/
 Chat_App_Application/.vs/Chat_App_Application/v15/
+*.cache
+Chat_App_Application/bin/Debug/Chat_App_Application.pdb
