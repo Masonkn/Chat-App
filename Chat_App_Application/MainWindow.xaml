@@ -5,29 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_App_Application"
         SizeToContent="WidthAndHeight"
-        Width="1000"
+        Width="883" Height="498"
         >
 
     <Grid>
 
         <!--/ This is the ListBox for all the tickets no matter their status >-->
-        <ListBox HorizontalAlignment="Left" Width="233" Margin="-3,73,0,1" BorderBrush="Black" BorderThickness="1">
+        <ListBox HorizontalAlignment="Left" Width="233" Margin="0,73,0,0" BorderBrush="Black" BorderThickness="1" Padding="-1,0">
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #1</ListBoxItem>
-            <ListBoxItem Height="60" BorderBrush="Black">Ticket #2</ListBoxItem>
+            <ListBoxItem Height="60">Ticket #2</ListBoxItem>
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #3</ListBoxItem>
-            <ListBoxItem Height="60" BorderBrush="Black">Ticket #4</ListBoxItem>
+            <ListBoxItem Height="60">Ticket #4</ListBoxItem>
             <ListBoxItem Height="60" Background="LightGray" BorderBrush="LightGray">Ticket #5</ListBoxItem>
         </ListBox>
 
 
         <!--/ Button and TextBox for sending messages through the app >-->
-        <TextBox x:Name="txtbox_msg" Margin="229,0,0,0" Text="Type your message here" BorderBrush="Black" Height="32" VerticalAlignment="Bottom" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtbox_msg" Margin="232,0,0,0" Text="Type your message here" BorderBrush="Black" Height="32" VerticalAlignment="Bottom"/>
 
 
         <!--/ This Textbox will serve to display messages >-->
         <!--/ The Textbox is wraped in a border tag just for style purposes >-->
         <Border x:Name="msg_txtbox_border" BorderBrush="Black" Margin="0,0,-2,31" BorderThickness="1" HorizontalAlignment="Right" Width="247" Grid.Column="2">
-            <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Margin="9,9,9,0" Height="517" VerticalAlignment="Top"/>
+            <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Margin="9,9,9,5.5"/>
         </Border>
 
 
@@ -36,11 +36,11 @@
         <Label x:Name="ticket_description" Content="Ticket description" Margin="230,27,244,0" BorderBrush="Black" BorderThickness="1" Height="45" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
 
         <!--/ TEMPORARY PLACEMENT of to-do, in progress and done tickets >-->
-        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,75,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
-        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,135,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
-        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,195,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
-        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,255,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
-        <Rectangle HorizontalAlignment="Left" Height="60" Margin="209,315,0,0" VerticalAlignment="Top" Width="20" Fill="Red"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="212,75,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="212,135,0,0" VerticalAlignment="Top" Width="20" Fill="Green"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="212,195,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="212,255,0,0" VerticalAlignment="Top" Width="20" Fill="Orange"/>
+        <Rectangle HorizontalAlignment="Left" Height="60" Margin="212,315,0,0" VerticalAlignment="Top" Width="20" Fill="Red"/>
 
         <!--/ The following items will be part of the top-left user menu -->
 

@@ -1,0 +1,52 @@
+﻿<Window x:Class="Chat_App_Application.Visual_Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chat_App_Application"
+        mc:Ignorable="d"
+        Title="Visual_Test" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*" MinWidth="160"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- This is the bg for the menu layouts -->
+        <Rectangle Grid.Column="0" Fill="#FFF4F4F5" Margin="0,0,0,0" HorizontalAlignment="Left" Width="160" Grid.RowSpan="2"/>
+        <Rectangle Grid.Row="0" Fill="#FFF4F4F5" Grid.ColumnSpan="2" Margin="0,0,0,0"/>
+
+        <!-- This are the close btns -->
+        <Button x:Name="BtnMaxim" Background="#FF4FCC58" HorizontalAlignment="Right" Height="12" Margin="0,5,45,0" VerticalAlignment="Top" Width="12" Grid.Column="1" BorderThickness="0" Click="BtnMaxim_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="BtnMinim" Background="#FFA7A7A7" HorizontalAlignment="Right" Margin="0,5,25,0" Width="12" Grid.Column="1" Height="12" VerticalAlignment="Top" BorderThickness="0" Click="BtnMinim_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="BtnClose" Click="BtnClose_Click" HorizontalAlignment="Right" Height="12"  Width="12"  Grid.Column="1" Margin="0,5,5,0" VerticalAlignment="Top" BorderThickness="0" Background="#FFD42121">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+
+    </Grid>
+</Window>
