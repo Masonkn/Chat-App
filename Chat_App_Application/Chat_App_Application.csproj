@@ -55,9 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GridTest.xaml.cs">
+      <DependentUpon>GridTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Visual_Test.xaml.cs">
       <DependentUpon>Visual_Test.xaml</DependentUpon>
     </Compile>
+    <Page Include="GridTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
