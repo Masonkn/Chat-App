@@ -41,5 +41,46 @@ namespace Chat_App_Application
 
             txtbox_msg.Text = "";//So the user can't spam their one message
         }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnMinim_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void BtnMaxim_Click(object sender, RoutedEventArgs e)
+        {
+            AdjustWindowSize();
+
+        }
+
+        private void topDock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                if (e.ClickCount == 2)
+                {
+                    AdjustWindowSize();
+                }
+                else
+                {
+                    Application.Current.MainWindow.DragMove();
+                }
+        }
+
+        private void AdjustWindowSize()
+        {
+            if (this.WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+        }
     }
 }
