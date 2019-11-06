@@ -10,7 +10,7 @@
     <Grid>
 
         <!--/ This is the ListBox for all the tickets no matter their status >-->
-
+        <Label Content="Dashboard"/>
 
         <!--/ Button and TextBox for sending messages through the app >-->
         <TextBox x:Name="txtbox_msg" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="27" VerticalAlignment="Bottom"/>
