@@ -1,0 +1,21 @@
+﻿<Window x:Class="Chat_App_Application.LoginScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chat_App_Application"
+        mc:Ignorable="d"
+        Title="ChatApp Login" Height="350" Width="400" FontSize="14" Background="WhiteSmoke">
+    <Border Background="LightGray" CornerRadius="10" Margin="10">
+        <StackPanel Margin="10" Background="Gray">
+            <Label Content="ChatApp Login" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="Username" Foreground="Black" FontSize="20"/>
+            <TextBox Name="txtUsername" Background="White" FontSize="18"/>
+            <Label Content="Password" Foreground="Black" FontSize="20"/>
+            <PasswordBox Name="txtPassword" Background="White"  Foreground="Black" FontSize="18"/>
+
+            <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="60 10" Background="White" Foreground="Black" FontSize="20" />
+        </StackPanel>
+    </Border>
+</Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-\\vmware-host\Shared Folders\Documents\Documents\GitHub\Chat-App\Chat_App_Application\obj\Debug\
+C:\Users\meeee\Documents\GitHub\Chat-App\Chat_App_Application\obj\Debug\
 Chat_App_Application
 none
 false
 DEBUG;TRACE
-\\vmware-host\Shared Folders\Documents\Documents\GitHub\Chat-App\Chat_App_Application\App.xaml
-11151548125
+C:\Users\meeee\Documents\GitHub\Chat-App\Chat_App_Application\App.xaml
+2-1452161638
 
-5-2017746502
+6753024029
 13-1505183044
-MainWindow.xaml;
+MainWindow.xaml;LoginScreen.xaml;
 
-False
+True
 
