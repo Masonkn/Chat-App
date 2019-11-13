@@ -61,6 +61,8 @@
                 </Style>
             </Button.Resources>
         </Button>
+        
+        
         <ListBox HorizontalAlignment="Left" Width="232" Margin="0,108,0,0" BorderBrush="LightGray" BorderThickness="1" Background="{x:Null}">
             <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #1"/>
             <ListBoxItem Height="60" Content="Ticket #2"/>

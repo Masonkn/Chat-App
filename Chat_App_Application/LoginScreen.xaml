@@ -5,17 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_App_Application"
         mc:Ignorable="d"
-        Title="ChatApp Login" Height="350" Width="400" FontSize="14" Background="WhiteSmoke">
-    <Border Background="LightGray" CornerRadius="10" Margin="10">
-        <StackPanel Margin="10" Background="Gray">
-            <Label Content="ChatApp Login" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
-            <Separator></Separator>
-            <Label Content="Username" Foreground="Black" FontSize="20"/>
-            <TextBox Name="txtUsername" Background="White" FontSize="18"/>
-            <Label Content="Password" Foreground="Black" FontSize="20"/>
-            <PasswordBox Name="txtPassword" Background="White"  Foreground="Black" FontSize="18"/>
+        Width="950" Height="539" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
+        >
 
-            <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="60 10" Background="White" Foreground="Black" FontSize="20" />
-        </StackPanel>
-    </Border>
+    <Grid>
+
+        <!-- These are the docks -->
+        <Rectangle x:Name="topDock" Fill="LightGray" Height="36" VerticalAlignment="Top" MouseDown="topDock_MouseDown"/>
+
+        <!-- This are the close, minimize and maximize btns -->
+        <Button x:Name="BtnMaxim" Background="#FF4FCC58" HorizontalAlignment="Right" Height="12" Margin="0,10,50,0" VerticalAlignment="Top" Width="12" BorderThickness="0" Click="BtnMaxim_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="BtnMinim" Background="#FFA7A7A7" HorizontalAlignment="Right" Margin="0,10,30,0" Width="12" Height="12" VerticalAlignment="Top" BorderThickness="0" Click="BtnMinim_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="BtnClose" Click="BtnClose_Click" HorizontalAlignment="Right" Height="12"  Width="12" Margin="0,10,10,0" VerticalAlignment="Top" BorderThickness="0" Background="#FFD42121">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!-- Title -->
+        <Label Content="ChatApp Login" Foreground="Black" FontSize="25" HorizontalAlignment="Left" Margin="388,82,0,0" Height="457" VerticalAlignment="Top"/>
+
+        <!-- Username tag & TextBox -->
+        <Label Content="Username" Foreground="Black" FontSize="20" Margin="160,156,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="790"/>
+        <TextBox Name="txtUsername" Background="White" FontSize="18" Margin="150,0,150,310" Height="40" VerticalAlignment="Bottom"/>
+
+        <!-- Password tag & PasswordBox -->
+        <Label Content="Password" Foreground="Black" FontSize="20" Margin="160,257,0,0" Height="40" VerticalAlignment="Top"/>
+        <PasswordBox Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,0,150,206" Height="39" VerticalAlignment="Bottom"/>
+
+        <!-- Login btn -->
+        <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="371,376,371,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+
+
+
+    </Grid>
+
 </Window>
