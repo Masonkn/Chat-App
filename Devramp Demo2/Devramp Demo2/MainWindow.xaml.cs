@@ -24,7 +24,7 @@ namespace Devramp_Demo2
         public MainWindow()
         {
             InitializeComponent();
-            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;Initial Catalog=AdventureWorks Test;Persist Security Info=False;User ID=Hayden;Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             using (var conn = new SqlConnection(connStr))
             {
@@ -57,13 +57,13 @@ namespace Devramp_Demo2
                 {
                     cmd.CommandText = @"
                     INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate)
-                    OUTPUT INSTERT.ProductID
+                    OUTPUT INSERTED.ProductID
                     VALUES (@Name, @number, @Cost, @Price, CURRENT_TIMESTAMP)";
 
-                    cmd.Parameters.AddWithValue("@Name", "SQL Server Express");
-                    cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS1");
-                    cmd.Parameters.AddWithValue("@Cost", 0);
-                    cmd.Parameters.AddWithValue("@Price", 0);
+                    cmd.Parameters.AddWithValue("@Name", "SQL Server Express1");
+                    cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS11");
+                    cmd.Parameters.AddWithValue("@Cost", 10);
+                    cmd.Parameters.AddWithValue("@Price", 10);
 
                     conn.Open();
 
