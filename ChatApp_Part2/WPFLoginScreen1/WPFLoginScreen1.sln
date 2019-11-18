@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFLoginScreen1", "WPFLoginScreen1\WPFLoginScreen1.csproj", "{438A8B54-DB1B-4064-A7C6-E250DD261CEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438A8B54-DB1B-4064-A7C6-E250DD261CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438A8B54-DB1B-4064-A7C6-E250DD261CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438A8B54-DB1B-4064-A7C6-E250DD261CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438A8B54-DB1B-4064-A7C6-E250DD261CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56AC5C4A-8E71-4169-BD06-0A92FC1F72BE}
+	EndGlobalSection
+EndGlobal
