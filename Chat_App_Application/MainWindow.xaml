@@ -34,7 +34,7 @@
 
         <!-- These are the docks -->
         <Rectangle Fill="LightGray" HorizontalAlignment="Left" Width="231"/>
-        <Rectangle x:Name="topDock" Fill="LightGray" Height="36" VerticalAlignment="Top" MouseDown="topDock_MouseDown"/>
+        <Rectangle x:Name="TopDock" Fill="LightGray" Height="36" VerticalAlignment="Top" MouseDown="TopDock_MouseDown"/>
 
 
         <!-- This are the close, minimize and maximize btns -->

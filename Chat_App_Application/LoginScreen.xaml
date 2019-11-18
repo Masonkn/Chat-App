@@ -40,15 +40,15 @@
 
 
         <!-- Title -->
-        <Label Content="ChatApp Login" Foreground="Black" FontSize="25" HorizontalAlignment="Left" Margin="388,82,0,0" Height="457" VerticalAlignment="Top"/>
+        <Label Content="ChatApp Login" Foreground="Black" FontSize="25" Margin="388,82,388,0" Height="457" VerticalAlignment="Top"/>
 
         <!-- Username tag & TextBox -->
         <Label Content="Username" Foreground="Black" FontSize="20" Margin="160,156,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="790"/>
-        <TextBox Name="txtUsername" Background="White" FontSize="18" Margin="150,0,150,310" Height="40" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="txtUsername" Background="White" FontSize="18" Margin="150,189,150,0" Height="40" VerticalAlignment="Top"/>
 
         <!-- Password tag & PasswordBox -->
         <Label Content="Password" Foreground="Black" FontSize="20" Margin="160,257,0,0" Height="40" VerticalAlignment="Top"/>
-        <PasswordBox Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,0,150,206" Height="39" VerticalAlignment="Bottom"/>
+        <PasswordBox x:Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,294,150,0" Height="39" VerticalAlignment="Top"/>
 
         <!-- Login btn -->
         <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="371,376,371,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
