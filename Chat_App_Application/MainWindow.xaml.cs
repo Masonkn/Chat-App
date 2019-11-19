@@ -58,7 +58,7 @@ namespace Chat_App_Application
 
         }
 
-        private void topDock_MouseDown(object sender, MouseButtonEventArgs e)
+        private void TopDock_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 if (e.ClickCount == 2)
