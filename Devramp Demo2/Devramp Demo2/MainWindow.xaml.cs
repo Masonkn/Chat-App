@@ -28,7 +28,7 @@ namespace Devramp_Demo2
 
             using (var conn = new SqlConnection(connStr))
             {
-                using (var command = conn.CreateCommand())
+                using (var command = conn.CreateCommand())//Reading?
                 {
                     command.CommandText = @"
                         SELECT
@@ -46,32 +46,33 @@ namespace Devramp_Demo2
                         while (reader.Read())
                         {
                             Console.WriteLine("ID: {0} Name: {1} Order Count: {2}", reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2));
+                            txt_box.Text = reader.GetString(1);//This is how you display to the WPF
                         }
                     }
                 }
             }
 
-            using (var conn = new SqlConnection(connStr))
-            {
-                using (var cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = @"
-                    INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate)
-                    OUTPUT INSERTED.ProductID
-                    VALUES (@Name, @number, @Cost, @Price, CURRENT_TIMESTAMP)";
+            //using (var conn = new SqlConnection(connStr))//Writing?
+            //{
+            //    using (var cmd = conn.CreateCommand())
+            //    {
+            //        cmd.CommandText = @"
+            //        INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate)
+            //        OUTPUT INSERTED.ProductID
+            //        VALUES (@Name, @number, @Cost, @Price, CURRENT_TIMESTAMP)";
 
-                    cmd.Parameters.AddWithValue("@Name", "SQL Server Express1");
-                    cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS11");
-                    cmd.Parameters.AddWithValue("@Cost", 10);
-                    cmd.Parameters.AddWithValue("@Price", 10);
+            //        cmd.Parameters.AddWithValue("@Name", "SQL Server Express5");
+            //        cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS2");
+            //        cmd.Parameters.AddWithValue("@Cost", 0);
+            //        cmd.Parameters.AddWithValue("@Price", 0);
 
-                    conn.Open();
+            //        conn.Open();
 
-                    int insertedProductID = (int)cmd.ExecuteScalar();
+            //        int insertedProductID = (int)cmd.ExecuteScalar();
 
-                    Console.WriteLine("Product ID {0} inserted.", insertedProductID);
-                }
-            }
+            //        Console.WriteLine("Product ID {0} inserted.", insertedProductID);
+            //    }
+            //}
 
             Console.ReadLine();
         }

@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="553*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txt_box" Grid.Column="1" HorizontalAlignment="Left" Height="147" Margin="106.2,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="295"/>
+
     </Grid>
 </Window>
