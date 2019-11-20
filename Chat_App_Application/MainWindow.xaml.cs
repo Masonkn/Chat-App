@@ -23,6 +23,7 @@ namespace Chat_App_Application
     {
         List<string> allMessages = new List<string>(); //The list of all mesages
         String msgDisp; //The string that will represent all the messages sent.
+        Random random = new Random();
 
         public MainWindow()
         {
@@ -59,7 +60,10 @@ namespace Chat_App_Application
                     INSERT INTO dbo.Code (CodeID, CodeText)
                     VALUES (@CodeID, @CodeText)";
 
-                    cmd.Parameters.AddWithValue("@CodeID", new Guid());
+                    //string id = new Guid().ToString();
+
+                    //cmd.Parameters.AddWithValue("@CodeID", new Guid());
+                    cmd.Parameters.AddWithValue("@CodeID", random.Next());
                     cmd.Parameters.AddWithValue("@CodeText", msg_txtblock.Text);
 
                     conn.Open();
