@@ -10,7 +10,9 @@
     <Grid>
 
         <!--/ This is the ListBox for all the tickets no matter their status >-->
-        <Label Content="Dashboard"/>
+        <Label Margin="0,0,0.4,0.2">
+            <TextBox Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"/>
+        </Label>
 
         <!--/ Button and TextBox for sending messages through the app >-->
         <TextBox x:Name="txtbox_msg" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="27" VerticalAlignment="Bottom"/>
@@ -61,8 +63,8 @@
                 </Style>
             </Button.Resources>
         </Button>
-        
-        
+
+
         <ListBox HorizontalAlignment="Left" Width="232" Margin="0,108,0,0" BorderBrush="LightGray" BorderThickness="1" Background="{x:Null}">
             <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #1"/>
             <ListBoxItem Height="60" Content="Ticket #2"/>
@@ -70,6 +72,7 @@
             <ListBoxItem Height="60" Content="Ticket #4"/>
             <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #5"/>
         </ListBox>
+        <TextBox HorizontalAlignment="Left" Height="391" TextWrapping="Wrap" Text="Write code here!" VerticalAlignment="Top" Width="436" Margin="237,116,0,0"/>
 
 
 
