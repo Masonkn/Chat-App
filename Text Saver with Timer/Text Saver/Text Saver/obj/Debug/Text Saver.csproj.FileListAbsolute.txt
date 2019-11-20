@@ -1,0 +1,45 @@
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe.config
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.pdb
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.g.cs
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\App.g.cs
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.cache
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.lref
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.baml
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.g.resources
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text_Saver.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.exe
+C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.pdb
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe.config
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.pdb
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csprojAssemblyReference.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.g.cs
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\App.g.cs
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.lref
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.baml
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.g.resources
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text_Saver.Properties.Resources.resources
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.GenerateResource.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.exe
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.pdb
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\bin\Debug\Text Saver.exe.config
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\bin\Debug\Text Saver.exe
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\bin\Debug\Text Saver.pdb
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.csprojAssemblyReference.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\MainWindow.g.cs
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\App.g.cs
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.lref
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\MainWindow.baml
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.g.resources
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text_Saver.Properties.Resources.resources
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.GenerateResource.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.exe
+D:\Users\mason\CS 270 - 272\Chat-App\Text Saver with Timer\Text Saver\Text Saver\obj\Debug\Text Saver.pdb
