@@ -33,7 +33,10 @@ namespace Text_Saver
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DisplayMessage();
-            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
+                "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
+                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
+                "TrustServerCertificate=False;Connection Timeout=30;";
             SQLedit(connStr);
         }
         void DisplayMessage()
