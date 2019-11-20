@@ -33,7 +33,8 @@ namespace Text_Saver
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DisplayMessage();
-            SQLsave();
+            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            SQLedit(connStr);
         }
         void DisplayMessage()
         {
@@ -43,26 +44,42 @@ namespace Text_Saver
 
             txt_box.Text = "";//So the user can't spam their one message
         }
-        void SQLsave()
+        void SQLsend(String connStr)
         {
-            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
             using (var conn = new SqlConnection(connStr))
             {
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT dbo.Messages (messText)
-                    OUTPUT INSERTED.MessageID
-                    VALUES(@messText)";
+                    INSERT INTO dbo.Code (CodeID, CodeText)
+                    VALUES (@CodeID, @CodeText)";
 
-                    cmd.Parameters.AddWithValue("@messText", txt_block.Text);
+                    cmd.Parameters.AddWithValue("@CodeID", new Guid());
+                    cmd.Parameters.AddWithValue("@CodeText", txt_block.Text);
 
                     conn.Open();
-
+                    cmd.ExecuteScalar();
                 }
             }
 
+        }
+        void SQLedit(String connStr)
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    UPDATE dbo.Code
+                    SET codeText = @codeText
+                    WHERE CodeID = 1";
+
+                    cmd.Parameters.AddWithValue("@codeText", txt_block.Text);
+
+                    conn.Open();
+                    cmd.ExecuteScalar();
+                }
+            }
         }
         void LocalSave()
         {

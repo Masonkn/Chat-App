@@ -68,8 +68,8 @@ namespace Devramp_Demo2
                     OUTPUT INSERTED.ProductID
                     VALUES (@Name, @number, @Cost, @Price, CURRENT_TIMESTAMP)";
 
-                    cmd.Parameters.AddWithValue("@Name", "SQL Server Express5");
-                    cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS2");
+                    cmd.Parameters.AddWithValue("@Name", "SQL Server Express6");
+                    cmd.Parameters.AddWithValue("@Number", "SQLEXPRESS6");
                     cmd.Parameters.AddWithValue("@Cost", 0);
                     cmd.Parameters.AddWithValue("@Price", 0);
 
