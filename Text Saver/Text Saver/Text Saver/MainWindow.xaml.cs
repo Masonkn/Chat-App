@@ -25,25 +25,38 @@ namespace Text_Saver
     {
         List<string> allMessages = new List<string>(); //The list of all mesages
         String msgDisp; //The string that will represent all the messages sent.
+        string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
+                "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
+                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
+                "TrustServerCertificate=False;Connection Timeout=30;";
 
         public MainWindow()
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void PushButton(object sender, RoutedEventArgs e)
         {
-            DisplayMessage();
-            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
-                "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
-                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
-                "TrustServerCertificate=False;Connection Timeout=30;";
-            SQLedit(connStr);
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    UPDATE dbo.Code
+                    SET codeText = @codeText
+                    WHERE CodeID = 4643635";
+
+                    cmd.Parameters.AddWithValue("@codeText", txt_box.Text);
+
+                    conn.Open();
+                    cmd.ExecuteScalar();
+                }
+            }
         }
         void DisplayMessage()
         {
             msgDisp += "\n" + txt_box.Text;//add onto the display String
 
-            txt_block.Text = msgDisp;//Replace the display String
+            //txt_block.Text = msgDisp;//Replace the display String
 
             txt_box.Text = "";//So the user can't spam their one message
         }
@@ -58,7 +71,7 @@ namespace Text_Saver
                     VALUES (@CodeID, @CodeText)";
 
                     cmd.Parameters.AddWithValue("@CodeID", new Guid());
-                    cmd.Parameters.AddWithValue("@CodeText", txt_block.Text);
+                    cmd.Parameters.AddWithValue("@CodeText", txt_box.Text);
 
                     conn.Open();
                     cmd.ExecuteScalar();
@@ -77,19 +90,42 @@ namespace Text_Saver
                     SET codeText = @codeText
                     WHERE CodeID = 1";
 
-                    cmd.Parameters.AddWithValue("@codeText", txt_block.Text);
+                    cmd.Parameters.AddWithValue("@codeText", txt_box.Text);
 
                     conn.Open();
                     cmd.ExecuteScalar();
                 }
             }
         }
-        void LocalSave()
+        void PullButton(object sender, RoutedEventArgs e)
         {
-            allMessages.Add(txt_box.Text);//This is more for saving than displaying
-            File.WriteAllText(Directory.GetCurrentDirectory() +
-                "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count - 1]);//Write the contents of the file
-        }
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var command = conn.CreateCommand())//Reading?
+                {
+                    command.CommandText = @"
+                    SELECT
+                    codedb.CodeText
+                    FROM dbo.Code as codedb
+                    ";
+                    conn.Open();
 
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            txt_box.Text = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            void LocalSave()
+            {
+                allMessages.Add(txt_box.Text);//This is more for saving than displaying
+                File.WriteAllText(Directory.GetCurrentDirectory() +
+                    "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count - 1]);//Write the contents of the file
+            }
+
+        }
     }
 }
