@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Chat_App_Application
 {
@@ -32,7 +33,7 @@ namespace Chat_App_Application
         public MainWindow()
         {
             InitializeComponent();
-            ResetTable();
+            //ResetTable();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,7 +41,7 @@ namespace Chat_App_Application
             LocalSave();
             SQLsend(connStr);
             SQLread(connStr);
-            DisplayMessage();
+            //DisplayMessage();
         }
 
         void DisplayMessage()
@@ -50,6 +51,20 @@ namespace Chat_App_Application
             msg_txtblock.Text = msgDisp;//Replace the display String
 
             txtbox_msg.Text = "";//So the user can't spam their one message
+        }
+
+        void PullTimer()
+        {
+            DispatcherTimer dt = new DispatcherTimer();
+
+            dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
+            //dt.Tick += dt_Update;
+
+            dt.Start();
+        }
+        void dt_Update(object sender, EventArgs e, String connStr)
+        {
+            SQLread(connStr);
         }
 
         void SQLsend(String connStr)
