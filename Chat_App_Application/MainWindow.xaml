@@ -15,7 +15,7 @@
         </Label>
 
         <!--/ Button and TextBox for sending messages through the app >-->
-        <TextBox x:Name="txtbox_msg" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="27" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="msg_txtbox" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="27" VerticalAlignment="Bottom"/>
 
 
         <!--/ This Textbox will serve to display messages >-->
