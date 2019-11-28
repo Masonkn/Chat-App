@@ -39,14 +39,14 @@ namespace Text_Saver
 
         private void PullTimer()
         {
-            DispatcherTimer dtClockTime = new DispatcherTimer();
+            DispatcherTimer dt = new DispatcherTimer();
 
-            dtClockTime.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
-            dtClockTime.Tick += dtClockTime_Tick;
+            dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
+            dt.Tick += dt_Update;
 
-            dtClockTime.Start();
+            dt.Start();
         }
-        private void dtClockTime_Tick(object sender, EventArgs e)
+        private void dt_Update(object sender, EventArgs e)
         {
             SQLpull();
         }
