@@ -24,21 +24,23 @@ namespace Chat_App_Application
         List<string> allMessages = new List<string>(); //The list of all mesages
         String msgDisp; //The string that will represent all the messages sent.
         Random random = new Random();
+        string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
+               "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
+               "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
+               "TrustServerCertificate=False;Connection Timeout=30;";
 
         public MainWindow()
         {
             InitializeComponent();
+            ResetTable();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DisplayMessage();
             LocalSave();
-            string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
-                "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
-                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
-                "TrustServerCertificate=False;Connection Timeout=30;";
             SQLsend(connStr);
+            SQLread(connStr);
+            DisplayMessage();
         }
 
         void DisplayMessage()
@@ -71,6 +73,45 @@ namespace Chat_App_Application
                 }
             }
 
+        }
+
+        void SQLread(String connStr)
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var command = conn.CreateCommand())//Reading?
+                {
+                    command.CommandText = @"
+                    SELECT
+                    codedb.CodeText
+                    FROM dbo.Code as codedb
+                    ";
+                    conn.Open();
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            msg_txtblock.Text = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        void ResetTable()
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    DELETE FROM dbo.Code
+                    ";
+
+                    conn.Open();
+                }
+            }
         }
 
         void LocalSave()
