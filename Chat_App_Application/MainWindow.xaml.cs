@@ -40,16 +40,16 @@ namespace Chat_App_Application
             LocalSave();
             SQLsend(connStr);
             SQLread(connStr);
-            DisplayMessage();
+            //DisplayMessage();
         }
 
         void DisplayMessage()
         {
-            msgDisp += "\n" + txtbox_msg.Text;//add onto the display String
+            msgDisp += "\n" + msg_txtbox.Text;//add onto the display String
 
             msg_txtblock.Text = msgDisp;//Replace the display String
 
-            txtbox_msg.Text = "";//So the user can't spam their one message
+            msg_txtbox.Text = "";//So the user can't spam their one message
         }
 
         void SQLsend(String connStr)
@@ -66,7 +66,7 @@ namespace Chat_App_Application
 
                     //cmd.Parameters.AddWithValue("@CodeID", new Guid());
                     cmd.Parameters.AddWithValue("@CodeID", random.Next());
-                    cmd.Parameters.AddWithValue("@CodeText", msg_txtblock.Text);
+                    cmd.Parameters.AddWithValue("@CodeText", msg_txtbox.Text);
 
                     conn.Open();
                     cmd.ExecuteScalar();
@@ -92,7 +92,10 @@ namespace Chat_App_Application
                     {
                         while (reader.Read())
                         {
-                            msg_txtblock.Text = reader.GetString(0);
+                            msg_txtblock.Text = "";
+                            msgDisp += "\n" + reader.GetString(0);
+                            msg_txtblock.Text = msgDisp;
+                            msg_txtbox.Text = "";//So the user can't spam their one message
                         }
                     }
                 }
@@ -116,7 +119,7 @@ namespace Chat_App_Application
 
         void LocalSave()
         {
-            allMessages.Add(txtbox_msg.Text);//This is more for saving than displaying
+            allMessages.Add(msg_txtbox.Text);//This is more for saving than displaying
             File.WriteAllText(Directory.GetCurrentDirectory() +
                 "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count - 1]);//Write the contents of the file
         }
