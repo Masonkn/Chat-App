@@ -179,5 +179,33 @@ namespace Chat_App_Application
                 this.WindowState = WindowState.Maximized;
             }
         }
+
+
+        private void Create_NewTicket(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Visible;
+        }
+
+        private void New_Ticket_done(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Hidden;
+
+            ListBoxItem new_ticket = new ListBoxItem();
+            new_ticket.Height = 60;
+
+            if (Tickets.Items.Count % 2 == 0 )
+            {
+                new_ticket.Background = Brushes.White;
+
+            }
+
+            new_ticket.Content = New_Ticket_Name.Text;
+            Tickets.Items.Add(new_ticket);
+        }
+
+        private void PopUpClose_Click(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Hidden;
+        }
     }
 }

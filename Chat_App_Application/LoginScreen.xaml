@@ -44,11 +44,11 @@
 
         <!-- Username tag & TextBox -->
         <Label Content="Username" Foreground="Black" FontSize="20" Margin="160,156,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="790"/>
-        <TextBox x:Name="txtUsername" Background="White" FontSize="18" Margin="150,189,150,0" Height="40" VerticalAlignment="Top"/>
+        <TextBox Padding="7" x:Name="txtUsername" Background="White" FontSize="18" Margin="150,189,150,0" Height="40" VerticalAlignment="Top"/>
 
         <!-- Password tag & PasswordBox -->
         <Label Content="Password" Foreground="Black" FontSize="20" Margin="160,257,0,0" Height="40" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,294,150,0" Height="39" VerticalAlignment="Top"/>
+        <PasswordBox Padding="7" x:Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,294,150,0" Height="39" VerticalAlignment="Top"/>
 
         <!-- Login btn -->
         <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="371,376,371,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
