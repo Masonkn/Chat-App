@@ -53,19 +53,19 @@ namespace Chat_App_Application
             msg_txtbox.Text = "";//So the user can't spam their one message
         }
 
-        void PullTimer()
-        {
-            DispatcherTimer dt = new DispatcherTimer();
+        //void PullTimer()
+        //{
+        //    DispatcherTimer dt = new DispatcherTimer();
 
-            dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
-            //dt.Tick += dt_Update;
+        //    dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
+        //    //dt.Tick += dt_Update;
 
-            dt.Start();
-        }
-        void dt_Update(object sender, EventArgs e, String connStr)
-        {
-            SQLread(connStr);
-        }
+        //    dt.Start();
+        //}
+        //void dt_Update(object sender, EventArgs e, String connStr)
+        //{
+        //    SQLread(connStr);
+        //}
 
         void SQLsend(String connStr)
         {
