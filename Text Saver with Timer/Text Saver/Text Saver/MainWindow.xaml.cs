@@ -33,7 +33,7 @@ namespace Text_Saver
 
         public MainWindow()
         {
-            InitializeComponent();
+            //InitializeComponent();
             PullTimer();
         }
 
