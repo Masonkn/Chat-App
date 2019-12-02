@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Chat_App_Application
 {
@@ -32,7 +33,7 @@ namespace Chat_App_Application
         public MainWindow()
         {
             InitializeComponent();
-            ResetTable();
+            //ResetTable();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,20 @@ namespace Chat_App_Application
             msg_txtblock.Text = msgDisp;//Replace the display String
 
             msg_txtbox.Text = "";//So the user can't spam their one message
+        }
+
+        void PullTimer()
+        {
+            DispatcherTimer dt = new DispatcherTimer();
+
+            dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
+            //dt.Tick += dt_Update;
+
+            dt.Start();
+        }
+        void dt_Update(object sender, EventArgs e, String connStr)
+        {
+            SQLread(connStr);
         }
 
         void SQLsend(String connStr)
@@ -163,6 +178,34 @@ namespace Chat_App_Application
             {
                 this.WindowState = WindowState.Maximized;
             }
+        }
+
+
+        private void Create_NewTicket(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Visible;
+        }
+
+        private void New_Ticket_done(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Hidden;
+
+            ListBoxItem new_ticket = new ListBoxItem();
+            new_ticket.Height = 60;
+
+            if (Tickets.Items.Count % 2 == 0 )
+            {
+                new_ticket.Background = Brushes.White;
+
+            }
+
+            new_ticket.Content = New_Ticket_Name.Text;
+            Tickets.Items.Add(new_ticket);
+        }
+
+        private void PopUpClose_Click(object sender, RoutedEventArgs e)
+        {
+            NewTicket_popup.Visibility = Visibility.Hidden;
         }
     }
 }

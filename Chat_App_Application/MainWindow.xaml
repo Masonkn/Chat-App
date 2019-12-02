@@ -15,12 +15,12 @@
         </Label>
 
         <!--/ Button and TextBox for sending messages through the app >-->
-        <TextBox x:Name="msg_txtbox" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="27" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="msg_txtbox" Padding="8" TextAlignment="left" Margin="230,0,94,0" TextWrapping="Wrap" Text="Type your message here" BorderThickness="2" BorderBrush="LightGray" Height="40" VerticalAlignment="Bottom"/>
 
 
         <!--/ This Textbox will serve to display messages >-->
         <!--/ The Textbox is wraped in a border tag just for style purposes >-->
-        <Border x:Name="msg_txtbox_border" BorderBrush="LightGray" Margin="0,35,0,25" BorderThickness="2" HorizontalAlignment="Right" Width="272">
+        <Border x:Name="msg_txtbox_border" BorderBrush="LightGray" Margin="0,35,0,38" BorderThickness="2" HorizontalAlignment="Right" Width="272">
             <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Margin="10,10,10,10"/>
         </Border>
 
@@ -31,7 +31,7 @@
 
 
         <!-- Send btn -->
-        <Button x:Name="btn_send" Content="Send" Click="Button_Click" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="98" BorderBrush="LightGray" BorderThickness="2"/>
+        <Button x:Name="btn_send" Content="Send" Click="Button_Click" Height="39" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="155" BorderBrush="LightGray" BorderThickness="2"/>
 
 
         <!-- These are the docks -->
@@ -65,14 +65,55 @@
         </Button>
 
 
-        <ListBox HorizontalAlignment="Left" Width="232" Margin="0,108,0,0" BorderBrush="LightGray" BorderThickness="1" Background="{x:Null}">
+        <ListBox x:Name="Tickets" HorizontalAlignment="Left" Width="232" Margin="0,108,0,40" BorderBrush="LightGray" BorderThickness="1" Background="{x:Null}">
             <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #1"/>
             <ListBoxItem Height="60" Content="Ticket #2"/>
             <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #3"/>
-            <ListBoxItem Height="60" Content="Ticket #4"/>
-            <ListBoxItem Height="60" Background="white" BorderBrush="LightGray" Content="Ticket #5"/>
         </ListBox>
-        <TextBox HorizontalAlignment="Left" Height="391" TextWrapping="Wrap" Text="Write code here!" VerticalAlignment="Top" Width="436" Margin="237,116,0,0"/>
+
+        <!-- TextBox for coding-->
+        <TextBox HorizontalAlignment="Left" Height="380" BorderThickness="0" TextWrapping="Wrap" Text="Write code here!" VerticalAlignment="Top" Width="436" Margin="237,116,0,0"/>
+
+        <!-- New ticket btn-->
+        <Button Content="New Ticket" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="231" BorderBrush="LightGray" Background="white" BorderThickness="2" Click="Create_NewTicket"/>
+
+        <!-- New ticket pop-up menu -->
+
+        <Grid Visibility="Hidden" x:Name="NewTicket_popup" Margin="0,166,301,0" Height="315" VerticalAlignment="Top" HorizontalAlignment="Right" Width="379">
+            <!-- Border and Pop-up label -->
+            <Border BorderThickness="3" CornerRadius="30" BorderBrush="LightGray"/>
+            <Label FontSize="25" Content="Create New Ticket" VerticalAlignment="Top" Margin="84,10,85,0" />
+
+            <!-- Name -->
+            <TextBox x:Name="New_Ticket_Name" Height="34" Margin="17,97,18,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="7"/>
+            <Label Content="Ticket Name" HorizontalAlignment="Left" Margin="28,71,0,0" VerticalAlignment="Top" Width="145"/>
+
+            <!-- Description -->
+            <TextBox x:Name="New_Ticket_Desc" Height="70" Margin="17,173,18,0" TextWrapping="Wrap" VerticalAlignment="Top" Padding="7"/>
+            <Label Content="Ticket Description" HorizontalAlignment="Left" Margin="25,146,0,0" VerticalAlignment="Top" Width="145"/>
+
+            <!-- Create btn -->
+            <Button Content="Create" Margin="108,261,107,0" VerticalAlignment="Top" Height="37" Background="White" BorderBrush="LightGray" BorderThickness="3" Click="New_Ticket_done"/>
+
+            <Button x:Name="PopUpClose" Click="PopUpClose_Click" HorizontalAlignment="Right" Height="12"  Width="12" Margin="0,20,20,0" VerticalAlignment="Top" BorderThickness="0" Background="#FFD42121">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            
+
+        </Grid>
+
+
+
+
+
+
+
+
 
 
 
