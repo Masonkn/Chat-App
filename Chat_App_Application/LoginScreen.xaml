@@ -51,7 +51,11 @@
         <PasswordBox Padding="7" x:Name="txtPassword" Background="White"  Foreground="Black" FontSize="18" Margin="150,294,150,0" Height="39" VerticalAlignment="Top"/>
 
         <!-- Login btn -->
-        <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin ="371,376,371,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+        <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Sign In" Margin ="234,376,508,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+        
+        <!-- Sign In Btn -->
+        <Button Name="btnSignUp" Click="btnSignUp_Click" Content="Sign Up" Margin ="485,378,257,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+
 
 
 

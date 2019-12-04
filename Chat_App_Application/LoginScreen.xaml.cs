@@ -109,5 +109,10 @@ namespace Chat_App_Application
                 this.WindowState = WindowState.Maximized;
             }
         }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
