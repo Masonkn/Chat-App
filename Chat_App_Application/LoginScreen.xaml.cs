@@ -27,7 +27,7 @@ namespace Chat_App_Application
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            if (txtUsername.Text == "user1" && txtPassword.Password == "123")
+            if (txtUsername.Text == "dev" && txtPassword.Password == "123")
             {
                 MainWindow dashboard = new MainWindow();
                 dashboard.Show();
@@ -35,12 +35,16 @@ namespace Chat_App_Application
             }
             else
             {
-                SqlConnection sqlCon = new SqlConnection(@"Data Source=DESKTOP-Q69OPGB\SQLEXPRESS; Initial Catalog=LoginDB; Integrated Security=True;");
+                //This connects to Azure Database Server
+                SqlConnection sqlCon = new SqlConnection(@"Data Source= tcp:coding-messanger-server.database.windows.net,1433;" + "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
+                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
+                "TrustServerCertificate=False;Connection Timeout=30;");
+               
                 try
                 {
                     if (sqlCon.State == System.Data.ConnectionState.Closed)
                         sqlCon.Open();
-                    String query = "SELECT COUNT(1) FROM USER_TABLE WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD";
+                    String query = "SELECT COUNT(1) FROM USER_LOGIN WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD";
                     SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
                     sqlCmd.CommandType = System.Data.CommandType.Text;
                     sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername.Text);
@@ -116,3 +120,4 @@ namespace Chat_App_Application
         }
     }
 }
+
