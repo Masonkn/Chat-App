@@ -33,8 +33,8 @@ namespace Chat_App_Application
         public MainWindow()
         {
             InitializeComponent();
-            //ResetTable();
             //PullTimer();
+            ResetTable();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -129,6 +129,7 @@ namespace Chat_App_Application
                     ";
 
                     conn.Open();
+                    cmd.ExecuteScalar();
                 }
             }
         }
