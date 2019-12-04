@@ -42,8 +42,8 @@ namespace Text_Saver
             DispatcherTimer dt = new DispatcherTimer();
 
             dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
-            dt.Tick += dt_Update;
-
+            dt.Tick += dt_Update;  
+       
             dt.Start();
         }
         private void dt_Update(object sender, EventArgs e)
