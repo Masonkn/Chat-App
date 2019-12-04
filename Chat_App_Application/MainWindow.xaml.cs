@@ -34,13 +34,14 @@ namespace Chat_App_Application
         {
             InitializeComponent();
             ResetTable();
+            PullTimer();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             LocalSave();
-            SQLsend(connStr);
-            SQLread(connStr);
+            SQLsend();
+            SQLread();
             //DisplayMessage();
         }
 
@@ -53,21 +54,21 @@ namespace Chat_App_Application
             msg_txtbox.Text = "";//So the user can't spam their one message
         }
 
-        //void PullTimer()
-        //{
-        //    DispatcherTimer dt = new DispatcherTimer();
+        private void PullTimer()
+        {
+            DispatcherTimer dt = new DispatcherTimer();
 
-        //    dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
-        //    //dt.Tick += dt_Update;
+            dt.Interval = new TimeSpan(0, 0, 1); //in Hour, Minutes, Second.
+            dt.Tick += dt_Update;
 
-        //    dt.Start();
-        //}
-        //void dt_Update(object sender, EventArgs e, String connStr)
-        //{
-        //    SQLread(connStr);
-        //}
+            dt.Start();
+        }
+        private void dt_Update(object sender, EventArgs e)
+        {
+            SQLread();
+        }
 
-        void SQLsend(String connStr)
+        void SQLsend()
         {
             using (var conn = new SqlConnection(connStr))
             {
@@ -90,7 +91,7 @@ namespace Chat_App_Application
 
         }
 
-        void SQLread(String connStr)
+        void SQLread()
         {
             using (var conn = new SqlConnection(connStr))
             {
