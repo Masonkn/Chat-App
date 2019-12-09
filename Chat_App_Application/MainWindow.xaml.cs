@@ -33,7 +33,6 @@ namespace Chat_App_Application
         public MainWindow()
         {
             InitializeComponent();
-            ResetTable();
             PullTimer();
         }
 
