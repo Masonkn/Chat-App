@@ -63,9 +63,10 @@ namespace Chat_App_Application
 
             dt.Start();
         }
+
         private void dt_Update(object sender, EventArgs e)
         {
-            SQLread();
+            //SQLread();
         }
 
         void SQLsend()
@@ -81,7 +82,7 @@ namespace Chat_App_Application
                     //string id = new Guid().ToString();
 
                     //cmd.Parameters.AddWithValue("@CodeID", new Guid());
-                    cmd.Parameters.AddWithValue("@CodeID", random.Next());
+                    cmd.Parameters.AddWithValue("@CodeID", 0);
                     cmd.Parameters.AddWithValue("@CodeText", msg_txtbox.Text);
 
                     conn.Open();
@@ -106,6 +107,7 @@ namespace Chat_App_Application
 
                     using (var reader = command.ExecuteReader())
                     {
+                        msgDisp = "";
                         while (reader.Read())
                         {
                             msg_txtblock.Text = "";
@@ -181,7 +183,6 @@ namespace Chat_App_Application
                 this.WindowState = WindowState.Maximized;
             }
         }
-
 
         private void Create_NewTicket(object sender, RoutedEventArgs e)
         {
