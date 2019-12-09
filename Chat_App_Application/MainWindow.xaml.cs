@@ -66,7 +66,7 @@ namespace Chat_App_Application
 
         private void dt_Update(object sender, EventArgs e)
         {
-            //SQLread();
+            SQLread();
         }
 
         void SQLsend()
@@ -84,6 +84,7 @@ namespace Chat_App_Application
                     //cmd.Parameters.AddWithValue("@CodeID", new Guid());
                     cmd.Parameters.AddWithValue("@CodeID", 0);
                     cmd.Parameters.AddWithValue("@CodeText", msg_txtbox.Text);
+                    msg_txtbox.Text = "";//So the user can't spam their one message
 
                     conn.Open();
                     cmd.ExecuteScalar();
@@ -113,7 +114,6 @@ namespace Chat_App_Application
                             msg_txtblock.Text = "";
                             msgDisp += "\n" + reader.GetString(0);
                             msg_txtblock.Text = msgDisp;
-                            msg_txtbox.Text = "";//So the user can't spam their one message
                         }
                     }
                 }
