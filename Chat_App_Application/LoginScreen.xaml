@@ -52,13 +52,43 @@
 
         <!-- Login btn -->
         <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Sign In" Margin ="234,376,508,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
-        
+
         <!-- Sign In Btn -->
         <Button Name="btnSignUp" Click="btnSignUp_Click" Content="Sign Up" Margin ="485,378,257,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
 
 
+        <!-- Sign In Page -->
+        <Grid x:Name="signup_page" Margin="0,38,0,0" Visibility="Visible" Background="White">
+
+            <!-- Title -->
+            <Label Content="ChatApp Sign Up" Foreground="Black" FontSize="25" Margin="378,42,364,0" Height="49" VerticalAlignment="Top"/>
+
+            <!-- Username & TextBox -->
+            <Label Content="Username" Foreground="Black" FontSize="20" Margin="122,109,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
+            <TextBox Padding="7" Background="White" FontSize="18" Margin="112,142,514,0" Height="40" VerticalAlignment="Top"/>
+
+            <!-- Password & TextBox -->
+            <Label Content="Password" Foreground="Black" FontSize="20" Margin="125,197,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="269"/>
+            <PasswordBox Padding="7" Background="White" FontSize="18" Margin="112,233,514,0" Height="40" VerticalAlignment="Top"/>
+
+            <!-- Sign Up Btn -->
+            <Button Click="finish_signup" BorderThickness="3" Content="Sign Up" BorderBrush="LightGray" Margin ="514,423,228,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+            <!-- Back btn -->
+            <Button Click="signup_back" Content="Back" Margin ="234,421,508,0" BorderBrush="PaleVioletRed" BorderThickness="3" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
+
+            <!-- Confrim Password -->
+            <Label Content="Confirm Password" Foreground="Black" FontSize="20" Margin="128,285,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="268"/>
+            <PasswordBox Padding="7" Background="White" FontSize="18" Margin="114,321,510,0" Height="40" VerticalAlignment="Top"/>
+
+            <!-- Email -->
+            <Label Content="Email" Foreground="Black" FontSize="20" Margin="537,110,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
+            <TextBox Padding="7" Background="White" FontSize="18" Margin="527,143,99,0" Height="40" VerticalAlignment="Top"/>
+
+        </Grid>
 
 
     </Grid>
+
+
 
 </Window>

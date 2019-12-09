@@ -116,6 +116,16 @@ namespace Chat_App_Application
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
+            signup_page.Visibility = Visibility.Visible;
+        }
+
+        private void signup_back(object sender, RoutedEventArgs e)
+        {
+            signup_page.Visibility = Visibility.Hidden;
+        }
+
+        private void finish_signup(object sender, RoutedEventArgs e)
+        {
 
         }
     }
