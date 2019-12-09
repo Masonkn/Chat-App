@@ -126,7 +126,17 @@ namespace Chat_App_Application
 
         private void finish_signup(object sender, RoutedEventArgs e)
         {
+            if (pass != confirm_pass)
+            {
+                confirm_pass.BorderBrush = Brushes.PaleVioletRed;
+                pass_error.Visibility = Visibility.Visible;
+            } else
+            {
+                confirm_pass.BorderBrush = Brushes.Black;
+                pass_error.Visibility = Visibility.Hidden;
+                signup_page.Visibility = Visibility.Visible;
 
+            }
         }
     }
 }

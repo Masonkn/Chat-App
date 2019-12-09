@@ -69,7 +69,7 @@
 
             <!-- Password & TextBox -->
             <Label Content="Password" Foreground="Black" FontSize="20" Margin="125,197,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="269"/>
-            <PasswordBox Padding="7" Background="White" FontSize="18" Margin="112,233,514,0" Height="40" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="pass" Padding="7" Background="White" FontSize="18" Margin="112,233,514,0" Height="40" VerticalAlignment="Top"/>
 
             <!-- Sign Up Btn -->
             <Button Click="finish_signup" BorderThickness="3" Content="Sign Up" BorderBrush="LightGray" Margin ="514,423,228,0" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
@@ -78,8 +78,10 @@
 
             <!-- Confrim Password -->
             <Label Content="Confirm Password" Foreground="Black" FontSize="20" Margin="128,285,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="268"/>
-            <PasswordBox Padding="7" Background="White" FontSize="18" Margin="114,321,510,0" Height="40" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="confirm_pass" Padding="7" Background="White" FontSize="18" Margin="114,321,510,0" Height="40" VerticalAlignment="Top"/>
 
+            <Label Visibility="Hidden" x:Name="pass_error" Foreground="PaleVioletRed" Content="Password not matching" FontSize="14" Margin="290,360,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="268"/>
+            
             <!-- Email -->
             <Label Content="Email" Foreground="Black" FontSize="20" Margin="537,110,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
             <TextBox Padding="7" Background="White" FontSize="18" Margin="527,143,99,0" Height="40" VerticalAlignment="Top"/>
