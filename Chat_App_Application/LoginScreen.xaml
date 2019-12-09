@@ -58,7 +58,7 @@
 
 
         <!-- Sign In Page -->
-        <Grid x:Name="signup_page" Margin="0,38,0,0" Visibility="Visible" Background="White">
+        <Grid x:Name="signup_page" Margin="0,38,0,0" Visibility="Hidden" Background="White">
 
             <!-- Title -->
             <Label Content="ChatApp Sign Up" Foreground="Black" FontSize="25" Margin="378,42,364,0" Height="49" VerticalAlignment="Top"/>
