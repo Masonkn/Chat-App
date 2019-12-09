@@ -40,9 +40,8 @@ namespace Chat_App_Application
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             LocalSave();
-            SQLsend();
-            SQLread();
-            //DisplayMessage();
+            SQLsend("Message");
+            SQLread("Message");
         }
 
         void DisplayMessage()
@@ -66,24 +65,24 @@ namespace Chat_App_Application
 
         private void dt_Update(object sender, EventArgs e)
         {
-            SQLread();
+            SQLread("Message");
         }
 
-        void SQLsend()
+        void SQLsend(String table)
         {
             using (var conn = new SqlConnection(connStr))
             {
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                    INSERT INTO dbo.Code (CodeID, CodeText)
-                    VALUES (@CodeID, @CodeText)";
+                    INSERT INTO dbo." + table + @" (" + table + @"ID, " + table + @"Text)
+                    VALUES (@" + table + @"ID, @" + table + @"Text)";
 
                     //string id = new Guid().ToString();
 
                     //cmd.Parameters.AddWithValue("@CodeID", new Guid());
-                    cmd.Parameters.AddWithValue("@CodeID", 0);
-                    cmd.Parameters.AddWithValue("@CodeText", msg_txtbox.Text);
+                    cmd.Parameters.AddWithValue("@" + table + @"ID", 0);
+                    cmd.Parameters.AddWithValue("@" + table + @"Text", msg_txtbox.Text);
                     msg_txtbox.Text = "";//So the user can't spam their one message
 
                     conn.Open();
@@ -93,16 +92,17 @@ namespace Chat_App_Application
 
         }
 
-        void SQLread()
+        void SQLread(String table)
         {
             using (var conn = new SqlConnection(connStr))
             {
                 using (var command = conn.CreateCommand())//Reading?
                 {
+                    
                     command.CommandText = @"
                     SELECT
-                    codedb.CodeText
-                    FROM dbo.Code as codedb
+                    table." + table + @"Text
+                    FROM dbo." + table + @" as table
                     ";
                     conn.Open();
 
