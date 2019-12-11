@@ -130,16 +130,16 @@ namespace Chat_App_Application
 
         private void finish_signup(object sender, RoutedEventArgs e)
         {
-            if (pass.Password != confirm_pass.Password)
+            if (pass != confirm_pass)
             {
                 confirm_pass.BorderBrush = Brushes.PaleVioletRed;
                 pass_error.Visibility = Visibility.Visible;
-
-            } else if (pass.Password == confirm_pass.Password)
+            } else
             {
-                confirm_pass.BorderBrush = Brushes.LightGray;
+                confirm_pass.BorderBrush = Brushes.Black;
                 pass_error.Visibility = Visibility.Hidden;
-                signup_page.Visibility = Visibility.Hidden;
+                signup_page.Visibility = Visibility.Visible;
+
             }
         }
     }

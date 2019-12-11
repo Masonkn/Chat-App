@@ -21,7 +21,10 @@
         <!--/ This Textbox will serve to display messages >-->
         <!--/ The Textbox is wraped in a border tag just for style purposes >-->
         <Border x:Name="msg_txtbox_border" BorderBrush="LightGray" Margin="0,35,0,38" BorderThickness="2" HorizontalAlignment="Right" Width="272">
-            <TextBlock x:Name="msg_txtblock" TextWrapping="Wrap" Margin="10,10,10,10"/>
+            <ScrollViewer>
+                <TextBlock x:Name="msg_txtblock" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Margin="10,10,10,10"/>
+            </ScrollViewer>
+            
         </Border>
 
 
