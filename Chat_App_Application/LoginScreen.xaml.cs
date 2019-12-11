@@ -47,8 +47,9 @@ namespace Chat_App_Application
                 {
                     if (sqlCon.State == System.Data.ConnectionState.Closed)
                         sqlCon.Open();
-                    String query = "SELECT COUNT(1) FROM USER_LOGIN WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD"; 
-                        
+                    //String query = "SELECT COUNT(1) FROM USER_LOGIN WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD"; 
+                    String query = "SELECT COUNT(1) FROM LOGIN_USER WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD";
+
                     SqlCommand sqlCmd = new SqlCommand(query,sqlCon);
 
                     sqlCmd.CommandType = System.Data.CommandType.Text;
@@ -123,21 +124,6 @@ namespace Chat_App_Application
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            //using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            //{
-            //    sqlCon.Open();
-            //    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-            //    sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-            //    sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername.Text);
-            //    sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword.Password);
-
-            //    sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
-            //    sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
-            //    sqlCmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
-                
-            //}
-
                 signup_page.Visibility = Visibility.Visible;
         }
 
