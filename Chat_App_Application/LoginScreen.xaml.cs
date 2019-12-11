@@ -169,7 +169,7 @@ namespace Chat_App_Application
 
                 sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername1.Text);
                 sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword1.Password);
-                //sqlCmd.Parameters.AddWithValue("@CONFIRM_PASSWORD", txtConfirmPassword.Password);
+                sqlCmd.Parameters.AddWithValue("@CONFIRM_PASSWORD", txtConfirmPassword.Password);
 
                 sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
                 sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
