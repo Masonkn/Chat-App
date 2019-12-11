@@ -44,11 +44,15 @@ namespace Chat_App_Application
                 {
                     if (sqlCon.State == System.Data.ConnectionState.Closed)
                         sqlCon.Open();
-                    String query = "SELECT COUNT(1) FROM USER_LOGIN WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD";
-                    SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                    String query = "SELECT COUNT(1) FROM USER_LOGIN WHERE USERNAME=@USERNAME AND PASSWORD=@PASSWORD"; 
+                        
+                    SqlCommand sqlCmd = new SqlCommand(query,sqlCon);
+
                     sqlCmd.CommandType = System.Data.CommandType.Text;
                     sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername.Text);
                     sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword.Password);
+
+
                     int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
                     if (count == 1)
                     {

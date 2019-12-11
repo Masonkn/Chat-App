@@ -76,7 +76,7 @@
             <!-- Back btn -->
             <Button Click="signup_back" Content="Back" Margin ="234,421,508,0" BorderBrush="PaleVioletRed" BorderThickness="3" Background="White" Foreground="Black" FontSize="20" Height="36" VerticalAlignment="Top" />
 
-            <!-- Confrim Password -->
+            <!-- Confirm Password -->
             <Label Content="Confirm Password" Foreground="Black" FontSize="20" Margin="128,285,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="268"/>
             <PasswordBox x:Name="confirm_pass" Padding="7" Background="White" FontSize="18" Margin="114,321,510,0" Height="40" VerticalAlignment="Top"/>
 
@@ -85,6 +85,14 @@
             <!-- Email -->
             <Label Content="Email" Foreground="Black" FontSize="20" Margin="537,110,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
             <TextBox Padding="7" Background="White" FontSize="18" Margin="527,143,99,0" Height="40" VerticalAlignment="Top"/>
+
+            <!-- First Name & TextBox -->
+            <Label Content="First Name" Foreground="Black" FontSize="20" Margin="537,197,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
+            <TextBox Padding="7" Background="White" FontSize="18" Margin="527,233,99,0" Height="40" VerticalAlignment="Top"/>
+
+            <!-- Last Name & TextBox -->
+            <Label Content="Last Name" Foreground="Black" FontSize="20" Margin="537,285,0,0" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="248"/>
+            <TextBox Padding="7" Background="White" FontSize="18" Margin="527,321,99,0" Height="40" VerticalAlignment="Top"/>
 
         </Grid>
 
