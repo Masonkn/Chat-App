@@ -35,11 +35,16 @@ namespace Text_Saver
         public MainWindow()
         {
             InitializeComponent();
+            txt_box.Focus();         // Set Logical Focus
+            Keyboard.Focus(txt_box); // Set Keyboard Focus
         }
+
         void PushButton(object sender, RoutedEventArgs e)
         {
+            
             SQLsend();
         }
+
         void DisplayMessage()
         {
             msgDisp += "\n" + txt_box.Text;//add onto the display String
@@ -48,6 +53,7 @@ namespace Text_Saver
 
             txt_box.Text = "";//So the user can't spam their one message
         }
+
         void SQLsend()
         {
             using (var conn = new SqlConnection(connStr))
@@ -67,6 +73,7 @@ namespace Text_Saver
             }
 
         }
+
         void SQLedit()
         {
             using (var conn = new SqlConnection(connStr))
@@ -85,16 +92,19 @@ namespace Text_Saver
                 }
             }
         }
+
         void PullButton(object sender, RoutedEventArgs e)
         {
             SQLread();
         }
+
         void LocalSave()
         {
             allMessages.Add(txt_box.Text);//This is more for saving than displaying
             File.WriteAllText(Directory.GetCurrentDirectory() +
                 "\\Saved Texts\\savedText.txt", allMessages[allMessages.Count - 1]);//Write the contents of the file
         }
+
         void SQLread()
         {
             using (var conn = new SqlConnection(connStr))

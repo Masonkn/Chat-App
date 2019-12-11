@@ -13,3 +13,18 @@ C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Deb
 C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.exe
 C:\Users\user\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.pdb
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe.config
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.exe
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\bin\Debug\Text Saver.pdb
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csprojAssemblyReference.cache
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.g.cs
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\App.g.cs
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.cache
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver_MarkupCompile.lref
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\MainWindow.baml
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.g.resources
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text_Saver.Properties.Resources.resources
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.GenerateResource.cache
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.csproj.CoreCompileInputs.cache
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.exe
+C:\Users\me\OneDrive\Documents\GitHub\Chat-App\Text Saver\Text Saver\Text Saver\obj\Debug\Text Saver.pdb

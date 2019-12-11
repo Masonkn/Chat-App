@@ -9,7 +9,7 @@
     <Grid>
         <!--"Click:" and "x:name="txt" are names that are referred to in the C#-->
         <TextBox Name="txt_box" HorizontalAlignment="Left" Height="253" Margin="58,40,0,0" TextWrapping="Wrap" Text="Code comes and goes here" VerticalAlignment="Top" Width="676"/>
-        <Button Click="PushButton" Content="Push Code" HorizontalAlignment="Left" Margin="116,329,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
+        <Button Click="PushButton" IsDefault="true" Content="Push Code" HorizontalAlignment="Left" Margin="116,329,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
         <Button Click="PullButton" Content="Pull Code" HorizontalAlignment="Left" Margin="450,329,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
     </Grid>
 </Window>
