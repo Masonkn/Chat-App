@@ -98,11 +98,9 @@ namespace Chat_App_Application
                 using (var command = conn.CreateCommand())//Reading?
                 {
                     
-                    command.CommandText = @"
-                    SELECT
-                    table." + table + @"Text
-                    FROM dbo." + table + @" as table
-                    ";
+                    command.CommandText = "SELECT " +
+                    table + "Text" +
+                    " FROM dbo." + table;
                     conn.Open();
 
                     using (var reader = command.ExecuteReader()) 
