@@ -20,6 +20,9 @@ namespace Chat_App_Application
     /// </summary>
     public partial class LoginScreen : Window
     {
+        string connectionString = @"Data Source= tcp:coding-messanger-server.database.windows.net,1433;" + "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
+                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
+                "TrustServerCertificate=False;Connection Timeout=30;";
         public LoginScreen()
         {
             InitializeComponent();
@@ -120,7 +123,22 @@ namespace Chat_App_Application
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            signup_page.Visibility = Visibility.Visible;
+            //using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            //{
+            //    sqlCon.Open();
+            //    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+            //    sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            //    sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername.Text);
+            //    sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword.Password);
+
+            //    sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
+            //    sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
+            //    sqlCmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                
+            //}
+
+                signup_page.Visibility = Visibility.Visible;
         }
 
         private void signup_back(object sender, RoutedEventArgs e)
@@ -130,17 +148,44 @@ namespace Chat_App_Application
 
         private void finish_signup(object sender, RoutedEventArgs e)
         {
-            if (pass != confirm_pass)
+
+            if (txtPassword1 != txtConfirmPassword)
             {
-                confirm_pass.BorderBrush = Brushes.PaleVioletRed;
+                txtConfirmPassword.BorderBrush = Brushes.PaleVioletRed;
                 pass_error.Visibility = Visibility.Visible;
             } else
             {
-                confirm_pass.BorderBrush = Brushes.Black;
+                txtConfirmPassword.BorderBrush = Brushes.Black;
                 pass_error.Visibility = Visibility.Hidden;
                 signup_page.Visibility = Visibility.Visible;
 
             }
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername1.Text);
+                sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword1.Password);
+                //sqlCmd.Parameters.AddWithValue("@CONFIRM_PASSWORD", txtConfirmPassword.Password);
+
+                sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
+                sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
+                sqlCmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+
+                sqlCmd.ExecuteNonQuery();
+                MessageBox.Show("Registration is successful");
+                Clear();
+
+            }
+        }
+
+        //Clears out info once submitted
+        void Clear()
+        {
+            txtFirstName.Text = txtLastName.Text = txtEmail.Text = txtUsername1.Text = txtPassword1.Password = txtConfirmPassword.Password;
         }
     }
 }

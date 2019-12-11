@@ -105,7 +105,7 @@ namespace Chat_App_Application
                     ";
                     conn.Open();
 
-                    using (var reader = command.ExecuteReader())
+                    using (var reader = command.ExecuteReader()) 
                     {
                         msgDisp = "";
                         while (reader.Read())
