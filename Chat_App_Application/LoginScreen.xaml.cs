@@ -127,51 +127,60 @@ namespace Chat_App_Application
                 signup_page.Visibility = Visibility.Visible;
         }
 
+        // This btn is th eone that opens the pop-up to sign up
         private void signup_back(object sender, RoutedEventArgs e)
         {
             signup_page.Visibility = Visibility.Hidden;
         }
 
+        // This btn trigers the evnt of signing up.
         private void finish_signup(object sender, RoutedEventArgs e)
         {
-
-            if (txtPassword1 != txtConfirmPassword)
+            // If passwords don't match then display error
+            if (txtPassword1.Password != txtConfirmPassword.Password)
             {
                 txtConfirmPassword.BorderBrush = Brushes.PaleVioletRed;
                 pass_error.Visibility = Visibility.Visible;
-            } else
-            {
-                txtConfirmPassword.BorderBrush = Brushes.Black;
-                pass_error.Visibility = Visibility.Hidden;
-                signup_page.Visibility = Visibility.Visible;
-
             }
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            // If passwords match then push new user info to the server
+            else
             {
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
+                
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                    sqlCmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername1.Text);
-                sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword1.Password);
-                sqlCmd.Parameters.AddWithValue("@CONFIRM_PASSWORD", txtConfirmPassword.Password);
+                    sqlCmd.Parameters.AddWithValue("@USERNAME", txtUsername1.Text);
+                    sqlCmd.Parameters.AddWithValue("@PASSWORD", txtPassword1.Password);
+                    sqlCmd.Parameters.AddWithValue("@CONFIRM_PASSWORD", txtConfirmPassword.Password);
 
-                sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
-                sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
-                sqlCmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                   sqlCmd.Parameters.AddWithValue("@FIRST_NAME", txtFirstName.Text);
+                   sqlCmd.Parameters.AddWithValue("@LAST_NAME", txtLastName.Text);
+                   sqlCmd.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
 
-                sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("Registration is successful");
-                Clear();
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Registration is successful");
+                    Clear();
 
+                    txtConfirmPassword.BorderBrush = Brushes.LightGray;
+                    pass_error.Visibility = Visibility.Hidden;
+                    signup_page.Visibility = Visibility.Hidden;
+
+                }
             }
         }
 
         //Clears out info once submitted
         void Clear()
         {
-            txtFirstName.Text = txtLastName.Text = txtEmail.Text = txtUsername1.Text = txtPassword1.Password = txtConfirmPassword.Password;
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+            txtUsername1.Text = "";
+            txtPassword1.Password = "";
+            txtConfirmPassword.Password = "";
         }
     }
 }
