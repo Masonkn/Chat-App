@@ -72,7 +72,7 @@
         </ListBox>
 
         <!-- TextBox for coding-->
-        <TextBox HorizontalAlignment="Left" Height="380" BorderThickness="0" TextWrapping="Wrap" Text="Write code here!" VerticalAlignment="Top" Width="436" Margin="237,116,0,0"/>
+        <TextBox x:Name="code_txtblock" HorizontalAlignment="Left" Height="380" BorderThickness="0" TextWrapping="Wrap" Text="Write code here!" VerticalAlignment="Top" Width="436" Margin="237,116,0,0"/>
 
         <!-- New ticket btn-->
         <Button Content="New Ticket" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="231" BorderBrush="LightGray" Background="white" BorderThickness="2" Click="Create_NewTicket"/>
@@ -106,6 +106,7 @@
 
 
         </Grid>
+        <Button x:Name="btn_send_code" Content="CodeUp" Click="Button_Click" Height="39" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="446" BorderBrush="LightGray" BorderThickness="2" Margin="0,0,272.4,38.2"/>
 
 
 

@@ -136,6 +136,78 @@ namespace Chat_App_Application
             }
         }
 
+        void SQLCodesend()
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    INSERT INTO dbo.CODING_TABLE (CodingID, Code)
+                    VALUES (@CodingID, @Code)";
+
+                    //string id = new Guid().ToString();
+
+                    //cmd.Parameters.AddWithValue("@CodeID", new Guid());
+                    cmd.Parameters.AddWithValue("@CodingID", 0);
+                    cmd.Parameters.AddWithValue("@TimeSent", DateTime.Now);
+                    //var dateStr = $"{now:yyyy-MM-dd H:m:s}";
+                    cmd.Parameters.AddWithValue("@Username", code_txtblock.Text);
+                    cmd.Parameters.AddWithValue("@Code", code_txtblock.Text);
+                    cmd.Parameters.AddWithValue("@TicketID", 1);
+                    cmd.Parameters.AddWithValue("@TicketName", "Ticket 1");
+                    code_txtblock.Text = "";//So the user can't spam their one message
+
+                    conn.Open();
+                    cmd.ExecuteScalar();
+                }
+            }
+
+        }
+
+        void SQLCoderead()
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var command = conn.CreateCommand())//Reading?
+                {
+                    command.CommandText = @"
+                    SELECT
+                    Codex.Code
+                    FROM dbo.CODING_TABLE as Codex
+                    ";
+                    conn.Open();
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        msgDisp = "";
+                        while (reader.Read())
+                        {
+                            code_txtblock.Text = "";
+                            msgDisp += "\n" + reader.GetString(0);
+                            code_txtblock.Text = msgDisp;
+                        }
+                    }
+                }
+            }
+        }
+
+        void ResetCodeTable()
+        {
+            using (var conn = new SqlConnection(connStr))
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                    DELETE FROM dbo.CODING_TABLE
+                    ";
+
+                    conn.Open();
+                    cmd.ExecuteScalar();
+                }
+            }
+        }
+
         void LocalSave()
         {
             allMessages.Add(msg_txtbox.Text);//This is more for saving than displaying
