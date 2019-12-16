@@ -25,7 +25,7 @@ namespace Chat_App_Application
         List<string> allMessages = new List<string>(); //The list of all mesages
         String msgDisp; //The string that will represent all the messages sent.
         Random random = new Random();
-        string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +
+        string connStr = "Server=tcp:coding-messanger-server.database.windows.net,1433;" +//The code that connects us to the database
                "Initial Catalog=Coding Messanger;Persist Security Info=False;User ID=Hayden;" +
                "Password=Arthur123;MultipleActiveResultSets=False;Encrypt=True;" +
                "TrustServerCertificate=False;Connection Timeout=30;";
@@ -105,12 +105,12 @@ namespace Chat_App_Application
 
                     using (var reader = command.ExecuteReader()) 
                     {
-                        msgDisp = "";
+                        msgDisp = "";//To avoid text duplication
                         while (reader.Read())
                         {
-                            msg_txtblock.Text = "";
-                            msgDisp += "\n" + reader.GetString(0);
-                            msg_txtblock.Text = msgDisp;
+                            msg_txtblock.Text = "";//To avoid text duplication
+                            msgDisp += "\n" + reader.GetString(0);//Getting each message
+                            msg_txtblock.Text = msgDisp;//Diplaying all messages
                         }
                     }
                 }
